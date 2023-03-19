@@ -1,1 +1,2 @@
 # OperatingSystemProject
+本项目用于记录MIT 6.s081课程的学习，并保存相应的笔记和lab代码
