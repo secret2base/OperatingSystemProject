@@ -1,5 +1,5 @@
-### lab1
-#### sleep
+## lab1
+### sleep
 写一个简单的sleep命令，使用系统调用sleep即可  
 需要注意将可执行文件名_sleep添加到makefile中的UPROGS项中
 ```c
@@ -77,7 +77,7 @@ int memcmp(const void *, const void *, uint);
 void *memcpy(void *, const void *, uint);
 ```
 
-#### pingpong
+### pingpong
 pingpong利用管道在父进程和子进程之间通信  
 - fork()为子进程也复制了一份管道的描述符p[2]
 - 两个进程是并行的，因此输出可能会交替（因为最开始主进程没有等待子进程输出，输出混乱所以没通过测试）
@@ -109,7 +109,7 @@ int main(int argc, char *argv[]){
 }
 ```
 
-#### primes
+### primes
 这个程序的任务描述最开始没看懂，其实就是对管道的运用训练，具体可描述为  
 1. main创建一个管道，并将2~35输入管道
 2. primes函数生成一个子进程，并再次生成一个管道（1.中的管道称为左邻居，2.中生成的新管道称为右邻居）
@@ -120,7 +120,7 @@ int main(int argc, char *argv[]){
 debug遇到的问题  
 - 程序正常运行但卡死在某一步
 这是我遇到的主要问题，原因是管道未关闭，现象如下
-![节点](./img/lab1_1.png)
+![节点](./img/lab1_1.png)  
 因为我最开始将管道关闭放在了exit()后面，因此最后一轮exit时管道仍未关闭  
 管道还是随用随关比较好，不然后面容易遗漏
 ```c
@@ -181,7 +181,7 @@ int main(int argc, char *argv[]){
 }
 ```
 
-#### find
+### find
 find这里参考了ls.c中的读取文件目录写法，我自己写的过程中主要是对文件读取和dirent以及stat两个结构体不太清楚
 - dirent中的两个属性，inum尚不清楚，需要等学到文件系统再回来补充，name则明显是文件名称,dirent用于读取文件名称
 - stat中本次只用到了type属性，用于判断类型
@@ -264,7 +264,7 @@ int main(int argc, char *argv[]){
 }
 ```
 
-#### xargs
+### xargs
 - 从标准输入（0）中按行读取所有字符（按空格拆分为多个参数）
 - 将上述所得参数连接在argv后面，补充此条命令的参数
 - 如何将字符数组按空格切分并对应到指针的过程比较关键
@@ -324,7 +324,7 @@ int main(int argc, char *argv[]){
  ```
 
 
- #### 总结
+ ### 总结
  从开始接触这个lab到完成所有内容总共花费约两天的时间  
  因为是第一个lab所以画了很多时间在环境配置，基础知识学习上面，附上通过截图
  ![节点](./img/lab1_2.png)
