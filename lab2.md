@@ -230,3 +230,13 @@ sys_sysinfo(void)
 // Return 0 on success, -1 on error.
 ```
 
+## 总结
+lab2实验的代码部分并不困难，主要是配置相关文件，并修改增加一些函数  
+通过本次实验熟悉的文件有
+- `user.h` 和 `usys.pl`（之前已接触过），用于设置用户命令
+- `syscall.h` 声明系统调用 `syscall.c` 系统调用过程
+- `sysproc.c`定义所有系统调用的具体实现
+- `proc.c` 进程管理
+
+附上实验通过截图
+![节点](./img/lab2_1.png)
