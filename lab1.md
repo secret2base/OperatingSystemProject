@@ -1,4 +1,4 @@
-## lab1
+## lab1 Xv6 and Unix utilities
 ### sleep
 写一个简单的sleep命令，使用系统调用sleep即可  
 需要注意将可执行文件名_sleep添加到makefile中的UPROGS项中
